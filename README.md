@@ -19,18 +19,18 @@
 > **Status:** ONEM1ND 1.0.0 is in final testing and has not been released yet. The downloads on this page are the earlier release, published under the former name HIVEM1ND.
 
 <p align="center">
-  <img src="assets/setup-wizard.png" width="694" alt="HIVEM1ND setup wizard, install mode step">
+  <img src="assets/setup-wizard.png" width="694" alt="ONEM1ND setup wizard, install mode step">
 </p>
 
 ## What it is
 
-HIVEM1ND is a folder of plain markdown that any coding agent can read and write. Context, memory, preferences and work in progress carry over across projects and machines instead of resetting with every chat. Roles, commands, features and knowledge modules are files, so there is no database and no lock, and any agent or app can read the folder directly. The only index is a markdown file inside each knowledge module, listing its protocols so an agent loads the ones the work needs instead of the whole module. Every supported agent attaches to the same mind through its own adapter, and an agent without one gets a generic attach prompt.
+ONEM1ND is a folder of plain markdown that any coding agent can read and write. Context, memory, preferences and work in progress carry over across projects and machines instead of resetting with every chat. Roles, commands, features and knowledge modules are files, so there is no database and no lock, and any agent or app can read the folder directly. The only index is a markdown file inside each knowledge module, listing its protocols so an agent loads the ones the work needs instead of the whole module. Every supported agent attaches to the same mind through its own adapter, and an agent without one gets a generic attach prompt.
 
 ## Quick start
 
 | Method | Steps |
 | --- | --- |
-| Windows | Download `HIVEM1ND-<version>-x64.zip` from [Releases](https://github.com/TXMSKA/HIVEM1ND/releases/latest), extract it, run `HIVEM1ND\HIVEM1ND.exe`. |
+| Windows | Download `HIVEM1ND-<version>-x64.zip` from [Releases](https://github.com/TXMSKA/ONEM1ND/releases/latest), extract it, run `HIVEM1ND\HIVEM1ND.exe`. |
 | npx | `npx hivem1nd init` opens the terminal wizard; add `--gui` for the browser wizard. |
 | Clone | Clone this repository into the folder that will hold the mind. That is the install, with no setup step. |
 | Genesis | Paste the [setup prompt](roles/genesis.md) into any agent chat and it runs the setup in plain language. |
@@ -41,7 +41,7 @@ The Windows build is unsigned, so SmartScreen may warn before the first run, and
 
 ## How it works
 
-HIVEM1ND is organized in nodes, an inverted tree with the mind at the top.
+ONEM1ND is organized in nodes, an inverted tree with the mind at the top.
 
 ```text
 mind (one per user)
@@ -51,7 +51,7 @@ mind (one per user)
 
 The hive is the mind itself: one per user, holding roles, commands, features and knowledge modules, plus everything its agents learn. An environment groups repos of one kind, such as a game engine or a web stack, and its coordinator runs at that level. A repo is the leaf, where an executor works, with a brief describing what it is and where its design document is located. A repo or an environment can hold a local instance too, a committed folder with overrides for that node.
 
-Any agent attaches in one of two modes. In on-demand mode nothing loads by itself; a command starts a chat in a role, and from there the agent works with the mind's context. In auto mode every new chat has HIVEM1ND loaded without running anything, through one line added to the agent's own rules file.
+Any agent attaches in one of two modes. In on-demand mode nothing loads by itself; a command starts a chat in a role, and from there the agent works with the mind's context. In auto mode every new chat has ONEM1ND loaded without running anything, through one line added to the agent's own rules file.
 
 ### Knowledge packs and protocols
 
@@ -69,7 +69,7 @@ Protocols are offered, not imposed. While a task is planned, the protocols that 
 | --- | --- | --- |
 | 1 | Install mode | Simple accepts every detected default and installs immediately; Custom opens every setting first. |
 | 2 | Mind location | The root folder for the mind: local, a cloud drive, a pendrive or a network location. A mind already in that folder is attached instead of reinstalled, and the step says so before it asks. |
-| 3 | Agents | Scans the machine and sets how each agent loads HIVEM1ND, on-demand or auto. |
+| 3 | Agents | Scans the machine and sets how each agent loads ONEM1ND, on-demand or auto. |
 | 4 | Content | Which features and knowledge modules to include. |
 | 5 | Projects | Confirms roots, optional environments and repositories. |
 | 6 | Confirm | Optional preferences and whether to check for updates automatically. |
@@ -169,7 +169,7 @@ To remove what was installed on a machine, run `uninstall.cmd` in the mind folde
 
 **Windows warns about an unknown publisher, or blocks the app outright.** The build is unsigned. SmartScreen shows a warning that can be dismissed with "Run anyway"; Smart App Control blocks unsigned software entirely and has no per-app exception, so it must stay off to run the packaged app.
 
-**Node.js version errors.** HIVEM1ND requires Node.js 22 or later. Check the installed version with `node --version` before running `npx hivem1nd init`.
+**Node.js version errors.** ONEM1ND requires Node.js 22 or later. Check the installed version with `node --version` before running `npx hivem1nd init`.
 
 **Where is the mind.** In auto mode, the HIVEM1ND line in each agent's rules file names its path. Inside the mind, `user/machines/<host>.md` records it under the `mind` field, one file per machine.
 

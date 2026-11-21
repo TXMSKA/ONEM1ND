@@ -1,21 +1,22 @@
 <div align="center">
-  <img src="assets/mark.svg" width="88" height="88" alt="HIVEM1ND mark">
+  <img src="assets/mark.svg" width="88" height="88" alt="ONEM1ND mark">
 
-  # HIVEM1ND
+  # ONEM1ND
 
-  One mind for every coding agent.
+  One mind for every coding agent: shared context, memory and preferences across projects and machines.
 
-  [![Release](https://img.shields.io/github/v/release/TXMSKA/HIVEM1ND?label=release)](https://github.com/TXMSKA/HIVEM1ND/releases/latest)
-  [![License](https://img.shields.io/github/license/TXMSKA/HIVEM1ND)](LICENSE)
-  [![CI](https://img.shields.io/github/actions/workflow/status/TXMSKA/HIVEM1ND/ci.yml?branch=master&label=CI)](https://github.com/TXMSKA/HIVEM1ND/actions/workflows/ci.yml)
+  [![License](https://img.shields.io/github/license/TXMSKA/ONEM1ND)](LICENSE)
+  [![CI](https://img.shields.io/github/actions/workflow/status/TXMSKA/ONEM1ND/ci.yml?branch=master&label=CI)](https://github.com/TXMSKA/ONEM1ND/actions/workflows/ci.yml)
 
-  [Download](https://github.com/TXMSKA/HIVEM1ND/releases/latest) &middot;
+  [Download](https://github.com/TXMSKA/ONEM1ND/releases/latest) &middot;
   [Quick start](#quick-start) &middot;
   [Commands](#commands) &middot;
   [Docs](files.md) &middot;
   [Links](https://txmska.com/links) &middot;
   [Support](#support)
 </div>
+
+> **Status:** ONEM1ND 1.0.0 is in final testing and has not been released yet. The downloads on this page are the earlier release, published under the former name HIVEM1ND.
 
 <p align="center">
   <img src="assets/setup-wizard.png" width="694" alt="HIVEM1ND setup wizard, install mode step">
